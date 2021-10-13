@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客登录管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/new_nav.css">
+</head>
+<body>
+
+<div class="ui middle aligned center aligned grid m-padded-tb-massive" style="padding-top: 20em!important;">
+    <div class="column" style="max-width: 30em!important">
+        <h1 class="ui teal image header">
+            <div class="content">
+                管理后台登录
+            </div>
+        </h1>
+        <form class="ui large form" method="post" action="#">
+            <div class="ui segment">
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="username" placeholder="用户名">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password" placeholder="密码">
+                    </div>
+                </div>
+                <div class="ui fluid large teal submit button">登录</div>
+            </div>
+
+            <div class="ui error message"></div>
+
+        </form>
+
+<!--        <div class="ui message">-->
+<!--            新用户? <a href="#">点击注册</a>-->
+<!--        </div>-->
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,2 +1,2 @@
 # TAKRBlog
- buildiing a blog
+I'm learning to buildi a blog.

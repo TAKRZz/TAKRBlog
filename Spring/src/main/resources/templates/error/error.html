@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="_fragments::head(~{::title})">
+    <meta charset="UTF-8">
+    <title>error</title>
+</head>
+<body>
+
+    <div th:replace="_fragments::menu(0)"></div>
+
+    <div class="m-container-small m-padded-tb-massive">
+        <div class="ui error message m-padded-tb-huge">
+            <div class="ui container">
+                <h1>Error</h1>
+                <h3>服务出现错误！</h3>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div th:utext="'&lt;!--'" th:remove="tag"></div>
+        <div th:utext="'Failed Request URL : ' + ${url}" th:remove="tag"></div>
+        <div th:utext="'Exception message : ' + ${exception.message}" th:remove="tag"></div>
+        <ul th:remove="tag">
+            <li th:each="st : ${exception.stackTrace}" th:remove="tag"><span th:utext="${st}" th:remove="tag"></span></li>
+        </ul>
+        <div th:utext="'--&gt;'" th:remove="tag"></div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <footer th:replace="_fragments::footer"></footer>
+</body>
+</html>

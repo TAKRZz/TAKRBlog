@@ -1,0 +1,278 @@
+2021-10-13 14:31:55.454  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Starting BlogApplication using Java 16.0.1 on TAKR with PID 9332 (D:\Files\Git\TAKRBlog\Spring\target\classes started by TAKR0 in D:\Files\Git\TAKRBlog\Spring)
+2021-10-13 14:31:55.454 DEBUG 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-13 14:31:55.454  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : The following profiles are active: dev
+2021-10-13 14:31:55.513  INFO 9332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-13 14:31:55.513  INFO 9332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-13 14:31:56.353  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-13 14:31:56.375  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2021-10-13 14:31:57.193  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-10-13 14:31:57.193  INFO 9332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-13 14:31:57.193  INFO 9332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-13 14:31:57.371  INFO 9332 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-13 14:31:57.371  INFO 9332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1858 ms
+2021-10-13 14:31:57.657  INFO 9332 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-13 14:31:57.710  INFO 9332 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-13 14:31:57.879  INFO 9332 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-13 14:31:57.996  INFO 9332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-13 14:31:57.996  WARN 9332 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-10-13 14:31:58.528  INFO 9332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-13 14:31:58.544  INFO 9332 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-10-13 14:31:58.798  INFO 9332 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-13 14:31:58.813  INFO 9332 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-13 14:31:58.898  WARN 9332 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-13 14:31:59.262  INFO 9332 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-13 14:31:59.763  INFO 9332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-13 14:31:59.832  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-10-13 14:31:59.848  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Started BlogApplication in 5.202 seconds (JVM running for 7.465)
+2021-10-13 14:33:23.065  INFO 9332 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-13 14:33:23.065  INFO 9332 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-13 14:33:23.066  INFO 9332 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-13 14:33:23.140  INFO 9332 --- [http-nio-8080-exec-2] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.index', args=[]}
+2021-10-13 14:33:23.148  INFO 9332 --- [http-nio-8080-exec-2] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:33:23.149 ERROR 9332 --- [http-nio-8080-exec-2] c.t.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8080/, Exception : / by zero
+2021-10-13 14:33:23.152  WARN 9332 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ArithmeticException: / by zero]
+2021-10-13 14:33:27.290  INFO 9332 --- [http-nio-8080-exec-7] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 14:33:27.291  INFO 9332 --- [http-nio-8080-exec-7] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 14:33:27.291  INFO 9332 --- [http-nio-8080-exec-7] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:33:33.612  INFO 9332 --- [http-nio-8080-exec-7] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.about', args=[]}
+2021-10-13 14:33:33.612  INFO 9332 --- [http-nio-8080-exec-7] com.takr.blog.aspect.LogAspect           : Result : about 
+2021-10-13 14:33:33.612  INFO 9332 --- [http-nio-8080-exec-7] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:33:45.189  INFO 9332 --- [http-nio-8080-exec-9] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.index', args=[]}
+2021-10-13 14:33:45.189  INFO 9332 --- [http-nio-8080-exec-9] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:33:45.190 ERROR 9332 --- [http-nio-8080-exec-9] c.t.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8080/, Exception : / by zero
+2021-10-13 14:33:45.190  WARN 9332 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ArithmeticException: / by zero]
+2021-10-13 14:33:52.971  INFO 9332 --- [http-nio-8080-exec-6] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.index', args=[]}
+2021-10-13 14:33:52.972  INFO 9332 --- [http-nio-8080-exec-6] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:33:52.972 ERROR 9332 --- [http-nio-8080-exec-6] c.t.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8080/, Exception : / by zero
+2021-10-13 14:33:52.972  WARN 9332 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ArithmeticException: / by zero]
+2021-10-13 14:33:57.208  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 14:33:57.208  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 14:33:57.208  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:34:01.089  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 14:34:01.089  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 14:34:01.089  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:34:02.053  INFO 9332 --- [http-nio-8080-exec-9] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 14:34:02.054  INFO 9332 --- [http-nio-8080-exec-9] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 14:34:02.054  INFO 9332 --- [http-nio-8080-exec-9] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:34:06.693  INFO 9332 --- [http-nio-8080-exec-8] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.index', args=[]}
+2021-10-13 14:34:06.693  INFO 9332 --- [http-nio-8080-exec-8] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:34:06.694 ERROR 9332 --- [http-nio-8080-exec-8] c.t.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8080/, Exception : / by zero
+2021-10-13 14:34:06.694  WARN 9332 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ArithmeticException: / by zero]
+2021-10-13 14:34:37.829  INFO 9332 --- [http-nio-8080-exec-9] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.index', args=[]}
+2021-10-13 14:34:37.829  INFO 9332 --- [http-nio-8080-exec-9] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:34:37.829 ERROR 9332 --- [http-nio-8080-exec-9] c.t.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8080/, Exception : / by zero
+2021-10-13 14:34:37.830  WARN 9332 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ArithmeticException: / by zero]
+2021-10-13 14:34:44.967  INFO 9332 --- [http-nio-8080-exec-2] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.index', args=[]}
+2021-10-13 14:34:44.967  INFO 9332 --- [http-nio-8080-exec-2] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:34:44.968 ERROR 9332 --- [http-nio-8080-exec-2] c.t.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8080/, Exception : / by zero
+2021-10-13 14:34:44.968  WARN 9332 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ArithmeticException: / by zero]
+2021-10-13 14:34:51.411  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.index', args=[]}
+2021-10-13 14:34:51.412  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:34:51.412 ERROR 9332 --- [http-nio-8080-exec-10] c.t.b.h.ControllerExceptionHandler       : Request URL : http://localhost:8080/, Exception : / by zero
+2021-10-13 14:34:51.412  WARN 9332 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ArithmeticException: / by zero]
+2021-10-13 14:35:28.210  INFO 9332 --- [http-nio-8080-exec-3] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 14:35:28.212  INFO 9332 --- [http-nio-8080-exec-3] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 14:35:28.212  INFO 9332 --- [http-nio-8080-exec-3] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:35:33.467  INFO 9332 --- [http-nio-8080-exec-9] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 14:35:33.468  INFO 9332 --- [http-nio-8080-exec-9] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 14:35:33.469  INFO 9332 --- [http-nio-8080-exec-9] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:35:36.769  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 14:35:36.769  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 14:35:36.770  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:35:39.596  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 14:35:39.596  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 14:35:39.597  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:35:43.091  INFO 9332 --- [http-nio-8080-exec-4] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 14:35:43.091  INFO 9332 --- [http-nio-8080-exec-4] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 14:35:43.091  INFO 9332 --- [http-nio-8080-exec-4] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 14:35:45.464  INFO 9332 --- [http-nio-8080-exec-5] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 14:35:45.464  INFO 9332 --- [http-nio-8080-exec-5] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 14:35:45.464  INFO 9332 --- [http-nio-8080-exec-5] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 15:25:15.872  INFO 9332 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-13 15:25:15.872  INFO 9332 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-10-13 15:25:15.872  INFO 9332 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-10-13 15:25:15.965  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Starting BlogApplication using Java 16.0.1 on TAKR with PID 9332 (D:\Files\Git\TAKRBlog\Spring\target\classes started by TAKR0 in D:\Files\Git\TAKRBlog\Spring)
+2021-10-13 15:25:15.965  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : No active profile set, falling back to default profiles: default
+2021-10-13 15:25:16.103  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-13 15:25:16.103  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2021-10-13 15:25:16.213  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-10-13 15:25:16.213  INFO 9332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-13 15:25:16.213  INFO 9332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-13 15:25:16.260  INFO 9332 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-13 15:25:16.260  INFO 9332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 295 ms
+2021-10-13 15:25:16.275  WARN 9332 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2021-10-13 15:25:16.275  INFO 9332 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-10-13 15:25:16.275  INFO 9332 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-10-13 15:25:16.291 ERROR 9332 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2021-10-13 15:25:18.002  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Starting BlogApplication using Java 16.0.1 on TAKR with PID 9332 (D:\Files\Git\TAKRBlog\Spring\target\classes started by TAKR0 in D:\Files\Git\TAKRBlog\Spring)
+2021-10-13 15:25:18.002 DEBUG 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-13 15:25:18.002  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : The following profiles are active: dev
+2021-10-13 15:25:18.142  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-13 15:25:18.142  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2021-10-13 15:25:18.252  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-10-13 15:25:18.252  INFO 9332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-13 15:25:18.252  INFO 9332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-13 15:25:18.328  INFO 9332 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-10-13 15:25:18.328  INFO 9332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 326 ms
+2021-10-13 15:25:18.375  INFO 9332 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-13 15:25:18.391  INFO 9332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-10-13 15:25:18.391  WARN 9332 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-10-13 15:25:18.974  INFO 9332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-10-13 15:25:18.974  INFO 9332 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-10-13 15:25:19.052  INFO 9332 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-13 15:25:19.052  INFO 9332 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-13 15:25:19.067  WARN 9332 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-13 15:25:19.114  INFO 9332 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-13 15:25:19.208  INFO 9332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-13 15:25:19.257  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-10-13 15:25:19.257  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Started BlogApplication in 1.287 seconds (JVM running for 3213.176)
+2021-10-13 15:25:19.257  INFO 9332 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-13 15:25:20.987  INFO 9332 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-13 15:25:20.987  INFO 9332 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-10-13 15:25:21.363  INFO 9332 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-10-13 15:25:21.458  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Starting BlogApplication using Java 16.0.1 on TAKR with PID 9332 (D:\Files\Git\TAKRBlog\Spring\target\classes started by TAKR0 in D:\Files\Git\TAKRBlog\Spring)
+2021-10-13 15:25:21.458 DEBUG 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-13 15:25:21.458  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : The following profiles are active: dev
+2021-10-13 15:25:21.649  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-13 15:25:21.664  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2021-10-13 15:25:21.837  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-10-13 15:25:21.837  INFO 9332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-13 15:25:21.837  INFO 9332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-13 15:25:21.884  INFO 9332 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-10-13 15:25:21.884  INFO 9332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 426 ms
+2021-10-13 15:25:21.946  INFO 9332 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-13 15:25:21.946  INFO 9332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-10-13 15:25:21.946  WARN 9332 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-10-13 15:25:22.417  INFO 9332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-10-13 15:25:22.417  INFO 9332 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-10-13 15:25:22.511  INFO 9332 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-13 15:25:22.511  INFO 9332 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-13 15:25:22.542  WARN 9332 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-13 15:25:22.698  INFO 9332 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-13 15:25:22.856  INFO 9332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-13 15:25:22.856  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-10-13 15:25:22.871  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Started BlogApplication in 1.446 seconds (JVM running for 3216.78)
+2021-10-13 15:25:22.871  INFO 9332 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-13 15:25:48.252  INFO 9332 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-13 15:25:48.252  INFO 9332 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-13 15:25:48.253  INFO 9332 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-10-13 15:25:48.270  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 15:25:48.279  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 15:25:48.279  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 15:25:49.984  INFO 9332 --- [http-nio-8080-exec-5] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.blog', args=[]}
+2021-10-13 15:25:49.984  INFO 9332 --- [http-nio-8080-exec-5] com.takr.blog.aspect.LogAspect           : Result : blog 
+2021-10-13 15:25:49.984  INFO 9332 --- [http-nio-8080-exec-5] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 15:25:50.833  INFO 9332 --- [http-nio-8080-exec-3] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.index', args=[]}
+2021-10-13 15:25:50.834  INFO 9332 --- [http-nio-8080-exec-3] com.takr.blog.aspect.LogAspect           : Result : index 
+2021-10-13 15:25:50.834  INFO 9332 --- [http-nio-8080-exec-3] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 15:30:19.945  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.index', args=[]}
+2021-10-13 15:30:19.945  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : Result : index 
+2021-10-13 15:30:19.945  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 15:30:24.674  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.about', args=[]}
+2021-10-13 15:30:24.674  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : Result : about 
+2021-10-13 15:30:24.674  INFO 9332 --- [http-nio-8080-exec-10] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 15:30:54.776  INFO 9332 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-13 15:30:54.776  INFO 9332 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2021-10-13 15:30:54.776  INFO 9332 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2021-10-13 15:30:54.885  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Starting BlogApplication using Java 16.0.1 on TAKR with PID 9332 (D:\Files\Git\TAKRBlog\Spring\target\classes started by TAKR0 in D:\Files\Git\TAKRBlog\Spring)
+2021-10-13 15:30:54.885 DEBUG 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-13 15:30:54.885  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : The following profiles are active: dev
+2021-10-13 15:30:55.041  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-13 15:30:55.041  INFO 9332 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2021-10-13 15:30:55.244  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-10-13 15:30:55.244  INFO 9332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-13 15:30:55.244  INFO 9332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-13 15:30:55.355  INFO 9332 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2021-10-13 15:30:55.355  INFO 9332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 470 ms
+2021-10-13 15:30:55.417  INFO 9332 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-13 15:30:55.433  INFO 9332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2021-10-13 15:30:55.433  WARN 9332 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-10-13 15:30:56.018  INFO 9332 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2021-10-13 15:30:56.018  INFO 9332 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-10-13 15:30:56.090  INFO 9332 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-13 15:30:56.090  INFO 9332 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-13 15:30:56.138  WARN 9332 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-13 15:30:56.328  INFO 9332 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-13 15:30:56.572  INFO 9332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-13 15:30:56.587  INFO 9332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-10-13 15:30:56.603  INFO 9332 --- [restartedMain] com.takr.blog.BlogApplication            : Started BlogApplication in 1.759 seconds (JVM running for 3550.513)
+2021-10-13 15:30:56.603  INFO 9332 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-10-13 15:30:57.336  INFO 9332 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-13 15:30:57.336  INFO 9332 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-13 15:30:57.338  INFO 9332 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-10-13 15:30:57.349  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : Request : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.takr.blog.web.IndexController.index', args=[]}
+2021-10-13 15:30:57.353  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : Result : index 
+2021-10-13 15:30:57.353  INFO 9332 --- [http-nio-8080-exec-1] com.takr.blog.aspect.LogAspect           : ----------doAfter--------------
+2021-10-13 16:17:24.005  INFO 13328 --- [restartedMain] com.takr.blog.BlogApplication            : Starting BlogApplication using Java 16.0.1 on TAKR with PID 13328 (D:\Files\Git\TAKRBlog\Spring\target\classes started by TAKR0 in D:\Files\Git\TAKRBlog\Spring)
+2021-10-13 16:17:24.005 DEBUG 13328 --- [restartedMain] com.takr.blog.BlogApplication            : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-13 16:17:24.005  INFO 13328 --- [restartedMain] com.takr.blog.BlogApplication            : The following profiles are active: dev
+2021-10-13 16:17:24.053  INFO 13328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-13 16:17:24.053  INFO 13328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-13 16:17:24.500  INFO 13328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-13 16:17:24.516  INFO 13328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2021-10-13 16:17:25.097  INFO 13328 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-10-13 16:17:25.097  INFO 13328 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-13 16:17:25.097  INFO 13328 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-13 16:17:25.284  INFO 13328 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-13 16:17:25.284  INFO 13328 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1231 ms
+2021-10-13 16:17:25.456  INFO 13328 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-13 16:17:25.488  INFO 13328 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-13 16:17:25.582  INFO 13328 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-13 16:17:25.647  INFO 13328 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-13 16:17:25.651  WARN 13328 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-10-13 16:17:26.148  INFO 13328 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-13 16:17:26.163  INFO 13328 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-10-13 16:17:29.042  INFO 13328 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-13 16:17:29.042  INFO 13328 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-13 16:17:29.120  WARN 13328 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-13 16:17:29.357  INFO 13328 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-13 16:17:29.702  INFO 13328 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-13 16:17:29.749  INFO 13328 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-10-13 16:17:29.765  INFO 13328 --- [restartedMain] com.takr.blog.BlogApplication            : Started BlogApplication in 6.336 seconds (JVM running for 7.492)
+2021-10-13 16:29:32.347  INFO 12172 --- [restartedMain] com.takr.blog.BlogApplication            : Starting BlogApplication using Java 16.0.1 on TAKR with PID 12172 (D:\Files\Git\TAKRBlog\Spring\target\classes started by TAKR0 in D:\Files\Git\TAKRBlog\Spring)
+2021-10-13 16:29:32.362 DEBUG 12172 --- [restartedMain] com.takr.blog.BlogApplication            : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-13 16:29:32.362  INFO 12172 --- [restartedMain] com.takr.blog.BlogApplication            : The following profiles are active: dev
+2021-10-13 16:29:32.397  INFO 12172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-13 16:29:32.397  INFO 12172 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-13 16:29:32.912  INFO 12172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-13 16:29:32.928  INFO 12172 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2021-10-13 16:29:33.524  INFO 12172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-10-13 16:29:33.524  INFO 12172 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-13 16:29:33.524  INFO 12172 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-13 16:29:33.649  INFO 12172 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-13 16:29:33.649  INFO 12172 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1252 ms
+2021-10-13 16:29:33.830  INFO 12172 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-13 16:29:33.861  INFO 12172 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-13 16:29:33.939  INFO 12172 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-13 16:29:34.003  INFO 12172 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-10-13 16:29:34.003  WARN 12172 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-10-13 16:29:34.634  INFO 12172 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-10-13 16:29:34.649  INFO 12172 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-10-13 16:29:37.296  INFO 12172 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-13 16:29:37.304  INFO 12172 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-13 16:29:37.377  WARN 12172 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-13 16:29:37.629  INFO 12172 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-13 16:29:38.027  INFO 12172 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-13 16:29:38.084  INFO 12172 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-10-13 16:29:38.093  INFO 12172 --- [restartedMain] com.takr.blog.BlogApplication            : Started BlogApplication in 6.373 seconds (JVM running for 7.585)
+2021-10-13 17:53:12.836  WARN 12172 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m6s798ms804µs700ns).

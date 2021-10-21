@@ -11,7 +11,7 @@
 
 <div th:replace="admin/_fragments::menu(0)"></div>
 
-<div class="ui middle aligned center aligned grid m-padded-tb-massive" style="padding-top: 20em!important;">
+<div class="ui middle aligned center aligned grid m-padded-tb-massive" style="padding-top: 15em!important;">
     <div class="column" style="max-width: 30em!important">
         <h1 class="ui teal image header">
             <div class="content">
@@ -36,6 +36,7 @@
             </div>
 
             <div class="ui error message"></div>
+            <div class="ui negative mini message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">用户名或密码错误</div>
 
         </form>
 
@@ -44,9 +45,33 @@
 <!--        </div>-->
     </div>
 </div>
-
+<br><br><br><br><br><br><br><br><br><br><br>
 <footer th:replace="admin/_fragments::footer"></footer>
 <th:block th:replace="admin/_fragments::script"></th:block>
+
+
+<script>
+    $('.ui.form').form({
+        fields : {
+            username : {
+                identifier : 'username',
+                rules : [{
+                    type : 'empty',
+                    prompt : '标题：请输入用户名'
+                }]
+            },
+            password : {
+                identifier : 'password',
+                rules : [{
+                    type : 'empty',
+                    prompt : '标题：请输入密码'
+                }]
+            }
+        }
+    })
+
+
+</script>
 
 </body>
 </html>

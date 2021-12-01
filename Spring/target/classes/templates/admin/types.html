@@ -48,6 +48,11 @@
     <!--中间-->
     <div class="m-container m-padded-tb-big">
         <div class="ui container">
+            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                <i class="close icon"></i>
+                <div class="header">提示： </div>
+                <p th:text="${message}">恭喜，操作成功！</p>
+            </div>
 
             <table class="ui celled center aligned table">
                 <thead>
@@ -146,6 +151,14 @@
         })
 
         $('.ui.dropdown').dropdown();
+
+        // 关闭message组件
+        $('.message .close')
+            .on('click', function (){
+                $(this)
+                    .closest('.message')
+                .transition('fade');
+            })
 
     </script>
 </body>

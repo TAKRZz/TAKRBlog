@@ -50,7 +50,7 @@
     <div class="m-container m-padded-tb-big">
         <div class="ui container">
             <form action="#" method="post" th:action="@{/admin/types}" class="ui form">
-                <div class="field">
+                <div class="required field">
                     <div class="ui left labeled input">
                         <label class="ui teal basic label">名称</label>
                         <input type="text" name="name" placeholder="分类名称">
@@ -140,13 +140,14 @@
             position : 'bottom center'
         })
         $('.ui.dropdown').dropdown();
+        // 前端校验
         $('.ui.form').form({
             fields : {
                 title : {
-                   identifier : 'title',
+                   identifier : 'name',
                     rules : [{
                       type : 'empty',
-                      prompt : '标题：请输入博客标题'
+                      prompt : '请输入分类名称：'
                     }]
                 }
             }

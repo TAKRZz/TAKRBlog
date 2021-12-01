@@ -30,9 +30,7 @@ public class LoginController {
 
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, HttpSession session, RedirectAttributes attributes, Model model) {
-
         User user = userService.checkUser(username, password);
-
         if (user != null) {
             user.setPassword(null);
             session.setAttribute("user", user);

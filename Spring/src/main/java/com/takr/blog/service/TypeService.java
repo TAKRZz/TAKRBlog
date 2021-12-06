@@ -4,6 +4,8 @@ import com.takr.blog.po.Type;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 
 public interface TypeService {
 
@@ -18,4 +20,6 @@ public interface TypeService {
     void deleteType(Long id);
 
     Type getTypeByName(String name);
+
+    List<Type> listType();
 }

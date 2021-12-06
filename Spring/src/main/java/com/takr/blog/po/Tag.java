@@ -4,6 +4,7 @@ package com.takr.blog.po;
 import org.apache.catalina.authenticator.SavedRequest;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +15,8 @@ public class Tag {
     @Id
     @GeneratedValue
     private Long id;
+
+    @NotBlank(message = "标签名称不能为空")
     private String name;
 
     @ManyToMany(mappedBy = "tags")

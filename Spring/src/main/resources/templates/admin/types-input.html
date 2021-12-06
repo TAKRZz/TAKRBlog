@@ -14,7 +14,7 @@
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui teal header item">管理后台</h2>
-            <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>博客</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>博客</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
             <div class="right m-item m-mobile-hide menu">
@@ -50,7 +50,8 @@
 <div class="m-container m-padded-tb-big">
     <div class="ui container">
 
-        <form action="#" method="post" th:object="${type}" th:action="*{id}==null ? @{/admin/types} : @{/admin/types/{id}(id=*{id})}" class="ui form">
+        <form action="#" method="post" th:object="${type}"
+              th:action="*{id}==null ? @{/admin/types} : @{/admin/types/{id}(id=*{id})}" class="ui form">
             <input type="hidden" name="id" th:value="*{id}">
             <div class="field">
                 <div class="ui left labeled input">
@@ -127,18 +128,6 @@
 
 
 <script>
-
-    <!--        初始化 markdown 编辑器-->
-    var contentEditor;
-    $(function () {
-        contentEditor = editormd("md-content", {
-            width: "100%",
-            height: 640,
-            syncScrolling: "single",
-            path: "../static/lib/editormd/lib/"
-        });
-
-    });
 
 
     $('.menu.toggle').click(function () {

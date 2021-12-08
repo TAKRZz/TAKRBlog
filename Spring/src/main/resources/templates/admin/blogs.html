@@ -61,7 +61,7 @@
                         <i class="dropdown icon"></i>
                         <div class="default text">分类</div>
                         <div class="menu">
-                            <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">分类1</div>
+                            <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">分类</div>
 
                         </div>
                     </div>
@@ -89,6 +89,7 @@
                     <th>标题</th>
                     <th>类型</th>
                     <th>推荐</th>
+                    <th>状态</th>
                     <th>更新时间</th>
                     <th>操作</th>
                 </tr>
@@ -99,8 +100,9 @@
                     <td th:text="${iterStat.count}">1</td>
                     <td th:text="${blog.title}">这是一个标题</td>
                     <td th:text="${blog.type.name}">类型1</td>
-                    <td th:text="${blog.recommend} ? 是 : 否">是</td>
-                    <td th:text="${blog.updatetime}">2021-9-9 20：52</td>
+                    <td th:text="${blog.recommend} ? 是 : 否"></td>
+                    <td th:text="${blog.published} ? 发布 : 草稿"></td>
+                    <td th:text="${blog.updateTime}">2021-9-9 20：52</td>
                     <td>
                         <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}"
                            class="ui mini basic teal button">编辑</a>
@@ -123,12 +125,19 @@
                                 <i class="right chevron icon"></i>
                             </a>
                         </div>
-                        <a href="#" class="ui blue basic left floated button">新增</a>
+                        <a href="#" th:href="@{/admin/blogs/input}" class="ui blue basic left floated button">新增</a>
                     </th>
                 </tr>
                 </tfoot>
 
             </table>
+
+            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                <i class="close icon"></i>
+                <div class="header">提示：</div>
+                <p th:text="${message}">恭喜，操作成功！</p>
+            </div>
+
         </div>
 
     </div>
@@ -137,7 +146,7 @@
 <br><br><br><br><br>
 <br><br><br><br><br>
 <br><br><br><br><br>
-<br><br><br><br><br>
+
 
 <!--底部-->
 <footer th:replace="admin/_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
@@ -191,7 +200,9 @@
         position: 'bottom center'
     })
 
-    $('.ui.dropdown').dropdown();
+    $('.ui.dropdown').dropdown({
+        on: 'hover'
+    })
 
     function page(obj) {
         $("[name='page']").val($(obj).data("page"));
@@ -209,6 +220,13 @@
     $('#search-btn').click(function (){
         loaddate();
     });
+
+    $('.message .close')
+        .on('click', function (){
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
 
 </script>
 </body>

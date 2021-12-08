@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.util.BeanUtil;
 import com.takr.blog.NotFoundException;
 import com.takr.blog.dao.TagRepository;
 import com.takr.blog.po.Tag;
+import javassist.compiler.Parser;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class TagServiceImpl implements TagService{
+public class TagServiceImpl implements TagService {
 
     @Autowired
     private TagRepository tagRepository;
@@ -60,25 +61,26 @@ public class TagServiceImpl implements TagService{
 
     @Override
     public List<Tag> listTag(String ids) {
-        return tagRepository.findAll();
+
+        return tagRepository.findAllById(convertToList(ids));
     }
 
-//    private Sort convertToList(String ids) {
-//        List<Long> list = new ArrayList<>();
-//        if (!"".equals(ids) && ids != null) {
-//            String[] idarray = ids.split(",");
-//            for (int i=0; i < idarray.length;i++) {
-//                list.add(new Long(idarray[i]));
-//            }
-//        }
-//        return Sort.by(list);
-//    }
+    private List<Long> convertToList(String ids) {
+        List<Long> list = new ArrayList<>();
+        if (!"".equals(ids) && ids != null) {
+            String[] idarray = ids.split(",");
+            for (int i = 0; i < idarray.length; i++) {
+                list.add(Long.parseLong(idarray[i]));
+            }
+        }
+        return list;
+    }
 
     @Override
     @Transactional
     public Tag updateTag(Long id, Tag tag) {
         Tag tag1 = tagRepository.findById(id).get();
-        if(tag1==null){
+        if (tag1 == null) {
             throw new NotFoundException("Tag Not Exist!");
         }
         BeanUtils.copyProperties(tag, tag1);

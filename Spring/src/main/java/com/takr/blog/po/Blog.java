@@ -26,6 +26,9 @@ public class Blog {
     private boolean commentabled;
     private boolean published;
     private boolean recommend;
+    @Basic(fetch = FetchType.LAZY)
+    @Lob
+    private String description;
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
@@ -190,6 +193,46 @@ public class Blog {
         this.updateTime = updateTime;
     }
 
+    public void init(){
+        tagIds = tagsToIds(tags);
+
+    }
+
+    private String tagsToIds(List<Tag> tags){
+        if(!tags.isEmpty()){
+            StringBuffer ids = new StringBuffer();
+            boolean flag = false;
+            for(Tag tag:tags){
+                if(flag){
+                    ids.append(",");
+                }
+                else {
+                    flag = true;
+                }
+                ids.append(tag.getId());
+            }
+            return ids.toString();
+        }else{
+            return tagIds;
+        }
+
+    }
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "Blog{" +
@@ -204,16 +247,15 @@ public class Blog {
                 ", commentabled=" + commentabled +
                 ", published=" + published +
                 ", recommend=" + recommend +
+                ", description='" + description + '\'' +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", user=" + user +
+                ", comments=" + comments +
+                ", tagIds='" + tagIds + '\'' +
                 '}';
     }
-
-    public String getTagIds() {
-        return tagIds;
-    }
-
-    public void setTagIds(String tagIds) {
-        this.tagIds = tagIds;
-    }
 }
+

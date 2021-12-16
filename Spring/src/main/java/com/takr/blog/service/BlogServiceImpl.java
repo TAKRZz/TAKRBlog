@@ -4,12 +4,15 @@ import com.takr.blog.NotFoundException;
 import com.takr.blog.dao.BlogRepository;
 import com.takr.blog.po.Blog;
 import com.takr.blog.po.Type;
+import com.takr.blog.util.MyBeanUtils;
 import com.takr.blog.vo.BlogQuery;
-import jdk.dynalink.linker.LinkerServices;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -56,14 +59,35 @@ public class BlogServiceImpl implements BlogService {
         }, pageable);
     }
 
+    @Override
+    public Page<Blog> listBlog(Pageable pageable) {
+
+        return blogRepository.findAll(pageable);
+    }
+
+    @Override
+    public List<Blog> listRecommendBlogTop(Integer size) {
+        Sort sort = Sort.by(Sort.Direction.DESC, "updateTime");
+        Pageable pageable = PageRequest.of(0, size, sort);
+        return blogRepository.findTop(pageable);
+    }
+
     @Transactional
     @Override
     public Blog saveBlog(Blog blog) {
-        blog.setCreateTime(new Date());
-        blog.setUpdateTime(new Date());
-        blog.setViews(0);
+        if (null == blog.getId()) {
+            blog.setCreateTime(new Date());
+            blog.setUpdateTime(new Date());
+            blog.setViews(0);
+            return blogRepository.save(blog);
+        } else {
+
+            blog.setUpdateTime(new Date());
+        }
         return blogRepository.save(blog);
+
     }
+
     @Transactional
     @Override
     public Blog updateBlog(Long id, Blog blog) {
@@ -72,8 +96,8 @@ public class BlogServiceImpl implements BlogService {
             throw new NotFoundException("Blog Not Exist!");
         }
 
-        BeanUtils.copyProperties(blog, blog1);
-
+        BeanUtils.copyProperties(blog, blog1, MyBeanUtils.getNullPropertyNames(blog));
+        blog1.setUpdateTime(new Date());
         return blogRepository.save(blog1);
     }
 

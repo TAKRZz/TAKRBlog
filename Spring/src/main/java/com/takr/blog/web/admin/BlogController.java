@@ -15,6 +15,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -41,7 +42,7 @@ public class BlogController {
     private TagService tagService;
 
     @GetMapping("/blogs")
-    public String blogs(@PageableDefault(size = 2, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blogQuery, Model model) {
+    public String blogs(@PageableDefault(size = 10, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blogQuery, Model model) {
 
         model.addAttribute("types", typeService.listType());
 
@@ -51,7 +52,7 @@ public class BlogController {
     }
 
     @PostMapping("/blogs/search")
-    public String search(@PageableDefault(size = 2, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blogQuery, Model model) {
+    public String search(@PageableDefault(size = 10, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blogQuery, Model model) {
 
         model.addAttribute("page", blogService.listBlog(pageable, blogQuery));
 
@@ -62,8 +63,21 @@ public class BlogController {
     @GetMapping("/blogs/input")
     public String input(Model model) {
         model.addAttribute("blog", new Blog());
+        setTypeAndTag(model);
+        return INPUT;
+    }
+
+    private void setTypeAndTag(Model model){
         model.addAttribute("types", typeService.listType());
         model.addAttribute("tags", tagService.listTag());
+    }
+
+    @GetMapping("/blogs/{id}/input")
+    public String editInput(@PathVariable Long id, Model model) {
+        Blog blog = blogService.getBlog(id);
+        blog.init();
+        model.addAttribute("blog", blog);
+        setTypeAndTag(model);
         return INPUT;
     }
 
@@ -82,5 +96,14 @@ public class BlogController {
         }
         return REDIRECT_LIST;
     }
+
+    @GetMapping("/blogs/{id}/delete")
+    public String delete(@PathVariable Long id ,RedirectAttributes attributes){
+        blogService.deleteBlog(id);
+        attributes.addFlashAttribute("message", "删除成功");
+        return REDIRECT_LIST;
+
+    }
+
 
 }

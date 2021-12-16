@@ -38,8 +38,8 @@
 <div class="ui attached pointing menu">
     <div class="ui container">
         <div class="right menu">
-            <a href="#" class="active teal item">列表</a>
-            <a href="#" class="item">发布</a>
+            <a href="#" th:href="@{/admin/blogs/input}" class="active teal item">列表</a>
+            <a href="#" th:href="@{/admin/blogs}" class="item">发布</a>
         </div>
 
     </div>
@@ -56,14 +56,16 @@
                     <input type="text" name="title" placeholder="标题">
                 </div>
                 <div class="field">
-                    <div class="ui selection dropdown">
-                        <input type="hidden" name="typeId">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">分类</div>
-                        <div class="menu">
-                            <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">分类</div>
-
+                    <div class="ui labeled action input">
+                        <div class="ui type selection dropdown">
+                            <input type="hidden" name="typeId">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">分类</div>
+                            <div class="menu">
+                                <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">分类</div>
+                            </div>
                         </div>
+                        <button class="ui clear compact button">clear</button>
                     </div>
                 </div>
                 <div class="field">
@@ -82,7 +84,7 @@
         </div>
 
         <div id="table-container">
-            <table th:fragment="blogList" class="ui compact center aligned table">
+            <table th:fragment="blogList" class="ui compact teal table">
                 <thead>
                 <tr>
                     <th>序号</th>
@@ -114,7 +116,7 @@
 
                 <tfoot>
                 <tr>
-                    <th colspan="6">
+                    <th colspan="7">
                         <div class="ui right floated pagination menu" th:if="${page.totalPages}>1">
                             <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="icon item"
                                th:unless="${page.first}">
@@ -218,8 +220,15 @@
         });
     }
     $('#search-btn').click(function (){
+        $("[name='page']").val(0);
         loaddate();
     });
+
+    $('.clear.button').on('click',function (){
+        $('.type.ui.dropdown')
+        .dropdown('clear')
+    })
+
 
     $('.message .close')
         .on('click', function (){

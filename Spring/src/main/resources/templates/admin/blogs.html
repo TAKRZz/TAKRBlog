@@ -62,7 +62,9 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">分类</div>
                             <div class="menu">
-                                <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">分类</div>
+                                <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}"
+                                     th:text="${type.name}">分类
+                                </div>
                             </div>
                         </div>
                         <button class="ui clear compact button">clear</button>
@@ -84,7 +86,7 @@
         </div>
 
         <div id="table-container">
-            <table th:fragment="blogList" class="ui compact teal table">
+            <table th:fragment="blogList" class="ui compact teal center aligned table">
                 <thead>
                 <tr>
                     <th>序号</th>
@@ -219,19 +221,20 @@
             page: $("[name='page']").val()
         });
     }
-    $('#search-btn').click(function (){
+
+    $('#search-btn').click(function () {
         $("[name='page']").val(0);
         loaddate();
     });
 
-    $('.clear.button').on('click',function (){
+    $('.clear.button').on('click', function () {
         $('.type.ui.dropdown')
-        .dropdown('clear')
+            .dropdown('clear')
     })
 
 
     $('.message .close')
-        .on('click', function (){
+        .on('click', function () {
             $(this)
                 .closest('.message')
                 .transition('fade');

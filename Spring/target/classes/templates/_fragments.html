@@ -19,16 +19,18 @@
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui teal header item">Blog</h2>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend = "${n==1}?'active'"><i class="home icon"></i>首页</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend = "${n==2}?'active'"><i class="idea icon"></i>分类</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend = "${n==3}?'active'"><i class="tags icon"></i>标签</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend = "${n==4}?'active'"><i class="clone icon"></i>归档</a>
-            <a href="#" class="m-item item m-mobile-hide" th:classappend = "${n==5}?'active'"><i class="info icon"></i>关于我</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend = "${n==1}?'active'" th:href="@{/}"><i class="home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend = "${n==2}?'active'" th:href="@{/types}"><i class="idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend = "${n==3}?'active'" th:href="@{/tags}"><i class="tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend = "${n==4}?'active'" th:href="@{/}"><i class="clone icon"></i>归档</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend = "${n==5}?'active'" th:href="@{/}"><i class="info icon"></i>关于我</a>
             <div class="right item">
-                <div class="ui icon m-item inverted transparent input m-mobile-hide">
-                    <input type="text" placeholder="Search......">
-                    <i class="search link icon"></i>
-                </div>
+                <form name="search" action="#" th:action="@{/search}" target="_blank" method="post">
+                    <div class="ui icon m-item inverted transparent input m-mobile-hide">
+                        <input type="text" name="query" placeholder="Search......" th:value="${query}">
+                        <i class="search link icon" onclick="document.forms['search'].submit()" ></i>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

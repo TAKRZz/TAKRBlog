@@ -24,6 +24,7 @@ public class LogAspect {
 
     }
 
+
     @Before("log()")
     public void doBefore(JoinPoint joinPoint) {
 

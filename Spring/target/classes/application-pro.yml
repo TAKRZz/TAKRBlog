@@ -1,9 +1,9 @@
 spring:
-#    mysql
+  #    mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.107.34.104:3306/blog?useUnicode=true&characterEncoding=utf-8
-    username: Blog
+    url: jdbc:mysql://rm-uf684wnt4zxp6va1zxo.mysql.rds.aliyuncs.com:3306/blog?useUnicode=true&characterEncoding=utf-8
+    username: root
     password: 123qwe!@#QWE
   jpa:
     hibernate:

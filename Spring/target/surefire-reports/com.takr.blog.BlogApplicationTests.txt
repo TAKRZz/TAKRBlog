@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.takr.blog.BlogApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.593 s - in com.takr.blog.BlogApplicationTests

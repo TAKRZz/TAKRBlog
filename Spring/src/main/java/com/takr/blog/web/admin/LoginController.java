@@ -28,6 +28,13 @@ public class LoginController {
 
     }
 
+    @GetMapping("/login")
+    public String login() {
+
+        return "admin/login";
+
+    }
+
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, HttpSession session, RedirectAttributes attributes, Model model) {
         User user = userService.checkUser(username, password);

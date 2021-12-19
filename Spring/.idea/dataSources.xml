@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://47.107.34.104:3306/blog</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="blog@rm-uf684wnt4zxp6va1zxo.mysql.rds.aliyuncs.com" uuid="bdc238a5-6b7f-4d5b-ac41-cfe92896ba41">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://rm-uf684wnt4zxp6va1zxo.mysql.rds.aliyuncs.com:3306/blog</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

@@ -35,10 +35,10 @@ public class MD5Utils {
         }
     }
 
-//    /**
-//     * 测试方法
-//     * @param args
-//     */
+    /**
+     * 测试方法
+     * @param args
+     */
 //    public static void main(String[] args) {
 //        System.out.println(code("123456"));
 //    }
